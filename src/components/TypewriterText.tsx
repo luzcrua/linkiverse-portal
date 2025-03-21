@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 
 interface TypewriterTextProps {
   text: string;
@@ -8,7 +8,7 @@ interface TypewriterTextProps {
   onComplete?: () => void;
 }
 
-const TypewriterText = ({ 
+const TypewriterText = memo(({ 
   text, 
   delay = 3000, 
   className = "", 
@@ -40,11 +40,14 @@ const TypewriterText = ({
     <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       <h1 
         className={`typewriter text-2xl md:text-3xl lg:text-4xl font-orbitron font-medium text-center ${className}`}
+        aria-label={text}
       >
         {text}
       </h1>
     </div>
   );
-};
+});
+
+TypewriterText.displayName = "TypewriterText";
 
 export default TypewriterText;
