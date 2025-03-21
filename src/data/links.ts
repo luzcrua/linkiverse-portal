@@ -1,5 +1,5 @@
 
-import { Briefcase, Linkedin, Instagram, Youtube, Mail } from "lucide-react";
+import { Briefcase, Linkedin, Instagram, Youtube, Mail, Globe } from "lucide-react";
 
 export interface LinkItem {
   id: string;
@@ -37,6 +37,13 @@ export const links: LinkItem[] = [
     url: "https://youtube.com/c/example",
     description: "Assista meus vídeos no YouTube",
     icon: Youtube
+  },
+  {
+    id: "website",
+    title: "Meu Website",
+    url: "https://www.example.com",
+    description: "Visite meu site oficial",
+    icon: Globe
   },
   {
     id: "newsletter",
