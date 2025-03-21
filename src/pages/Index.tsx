@@ -108,8 +108,18 @@ const Index = () => {
           </motion.div>
         </div>
 
-        <footer className="w-full mt-16 text-center text-sm text-gray-400">
-          <p>© {new Date().getFullYear()} HubLink - Todos os direitos reservados</p>
+        <footer className="w-full mt-16 text-center text-sm">
+          <p className="text-gray-400">© {new Date().getFullYear()} HubLink - Todos os direitos reservados</p>
+          <p className="text-gray-500 text-xs mt-1">
+            <a 
+              href="https://arinelson.space/contato" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              Quer construir o seu próprio HubLinks ou link da bio personalizado? Entre em contato.
+            </a>
+          </p>
         </footer>
       </div>
     </>
